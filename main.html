@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieClick</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #8F00FF;
+            margin: 0;
+            padding: 0;
+            color: #fff; /* Set default text color to white */
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        .showcase {
+            min-height: 400px;
+            background: url('showcase.jpg') no-repeat 0 -400px;
+            text-align: center;
+            color: #fff;
+        }
+        .showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        .showcase p {
+            font-size: 20px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .video-container video {
+            width: 100%;
+            max-width: 720px;
+        }
+        .episode-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .episode-buttons button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+            border-radius: 5px; /* Add rounded corners */
+        }
+        .episode-buttons button:hover {
+            background-color: #555;
+        }
+
+        /* Hover effect for the entire episode section */
+        .content:hover {
+            background-color: #6600cc; /* Darken the background on hover */
+        }
+
+        /* Style for the social media section */
+        .content h2 {
+            text-align: center;
+        }
+
+        .content p {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .content strong {
+            color: #ff00ff; /* Highlight the social media names */
+        }
+    </style>
+    <script>
+        const episodeIds = ['episode1', 'episode2', 'episode3', 'episode4', 'episode5', 
+                      'episode6', 'episode7', 'episode8', 'episode9', 'episode10',
+                      'episode11', 'episode12', 'episode13', 'episode14', 'episode15', 
+                      'episode16', 'episode17', 'episode18', 'episode19', 'episode20',
+                      'episode21', 'episode22'];
+
+        function showEpisode(episodeId) {
+            // Hide all episodes
+            episodeIds.forEach(id => {
+                document.getElementById(id).style.display = 'none';
+            });
+
+            // Show the selected episode
+            document.getElementById(episodeId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>MovieClick</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Episodes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="showcase">
+        <div class="container">
+            <h1>Season 5 Episodes</h1>
+            <p>Watch episode 5 of The Rookie</p>
+        </div>
+    </section>
+    <section class="content">
+        <div class="container">
+            <div class="episode-buttons">
+                <button onclick="showEpisode('episode1')">Episode 1</button>
+                <button onclick="showEpisode('episode2')">Episode 2</button>
+                <button onclick="showEpisode('episode3')">Episode 3</button>
+                <button onclick="showEpisode('episode4')">Episode 4</button>
+                <button onclick="showEpisode('episode5')">Episode 5</button>
+                <button onclick="showEpisode('episode6')">Episode 6</button>
+                <button onclick="showEpisode('episode7')">Episode 7</button>
+                <button onclick="showEpisode('episode8')">Episode 8</button>
+                <button onclick="showEpisode('episode9')">Episode 9</button>
+                <button onclick="showEpisode('episode10')">Episode 10</button>
+                <button onclick="showEpisode('episode11')">Episode 11</button>
+                <button onclick="showEpisode('episode12')">Episode 12</button>
+                <button onclick="showEpisode('episode13')">Episode 13</button>
+                <button onclick="showEpisode('episode14')">Episode 14</button>
+                <button onclick="showEpisode('episode15')">Episode 15</button>
+                <button onclick="showEpisode('episode16')">Episode 16</button>
+                <button onclick="showEpisode('episode17')">Episode 17</button>
+                <button onclick="showEpisode('episode18')">Episode 18</button>
+                <button onclick="showEpisode('episode19')">Episode 19</button>
+                <button onclick="showEpisode('episode20')">Episode 20</button>
+                <button onclick="showEpisode('episode21')">Episode 21</button>
+                <button onclick="showEpisode('episode22')">Episode 22</button>
+            </div>
+            <div id="episode1" class="video-container" style="display: none;">
+                <h2>Episode 1</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/903i?download_token=5cbc0b2a7a2c8a79bfb0760fe2d19d90b1c83bd9f9c35cfffc95fcbf5c81f454" type="video/mp4" size="1080">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div id="episode2" class="video-container" style="display: none;">
+                <h2>Episode 2</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/903l?download_token=7785c6b57b3949aa82a11ac9ac091a7346b91e13980a612f5c7d78bb95180d5b" type="video/mp4" size="1080">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div id="episode3" class="video-container" style="display: none;">
+                <h2>Episode 3</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/903p?download_token=fa59c4459ed1984637c0bdd1e6f096c9cf853656d842805235492d5a41c2cc39" type="video/mp4" size="1080">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div id="episode4" class="video-container" style="display: none;">
+                <h2>Episode 4</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/903n?download_token=3360a80b61ae847adb6946bdec9bf28dc2ed1c99bc0000ae43ce09340a6b6ef6" type="video/mp4" size="480">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div id="episode5" class="video-container" style="display: none;">
+                <h2>Episode 5</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/903u?download_token=5f06662ed20af7180b64fe2fcee5822c797e14bccec19c8a1c690959b3332a2d"" type="video/mp4" size="480">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div id="episode6" class="video-container" style="display: none;">
+                <h2>Episode 6</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/903x?download_token=4a41e53ef4a2e1118a87467da4ac636429ce3b2a175bc5beae2e78e5538082ff" type="video/mp4" size="480">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div id="episode7" class="video-container" style="display: none;">
+                <h2>Episode 7</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/903y?download_token=286cdfb34143cfcdd5d5700b816038f67376154b5b38aa4d60be7121edf37106" type="video/mp4" size="480">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div id="episode8" class="video-container" style="display: none;">
+                <h2>Episode 8</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/dccG?download_token=6921f4de923c768250863ab5ce289f235c08f618c46cc7daf8e5c73b43a865fd" type="video/mp4" size="480">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div id="episode9" class="video-container" style="display: none;">
+                <h2>Episode 9</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/dccH?download_token=764f8c839c23ddbad00697804ffd9df4c2d1a2daf68d91a7ce0dec972c8eb55b" type="video/mp4" size="480">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div id="episode10" class="video-container" style="display: none;">
+                <h2>Episode 10</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/dccL?download_token=546646f32e24c32b8e72a5a090811088ac75edd6e78115263cbe8d2b7e580232" type="video/mp4" size="480">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div id="episode11" class="video-container" style="display: none;">
+                <h2>Episode 11</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/dccN?download_token=fa57599909f60ef468657e1f64dd40e137f9e6256b68d2a41588c7adcde2bee4" type="video/mp4" size="480">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <div id="episode12" class="video-container" style="display: none;">
+                <h2>Episode 12</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/dccQ?download_token=83227b53a293d937e887019f543cdb70951f2a512aa334192f2f2f4c8822717d" type="video/mp4" size="480">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+
+
+            <div id="episode13" class="video-container" style="display: none;">
+                <h2>Episode 13</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/dccU?download_token=abc8ef43bf973a1fcd7ec71942ceafde4e495ff9201948b29d46b28363bb1f70" type="video/mp4" size="480">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div id="episode14" class="video-container" style="display: none;">
+                <h2>Episode 14</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/dccW?download_token=5ad4db0540aae85ff04d4026e8ae51ccc382e118e153ab25150d4e6e400a2b49" type="video/mp4" size="480">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div id="episode15" class="video-container" style="display: none;">
+                <h2>Episode 15</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/dccW?download_token=5ad4db0540aae85ff04d4026e8ae51ccc382e118e153ab25150d4e6e400a2b49" type="video/mp4" size="480">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div id="episode16" class="video-container" style="display: none;">
+                <h2>Episode 16</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/9043?download_token=a6a698dfa7595a2f32550cbf77376a20652353c049b5d9153c98fc9f4f7f00a2" type="video/mp4" size="480">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div id="episode17" class="video-container" style="display: none;">
+                <h2>Episode 17</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/9043?download_token=a6a698dfa7595a2f32550cbf77376a20652353c049b5d9153c98fc9f4f7f00a2" type="video/mp4" size="480">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div id="episode18" class="video-container" style="display: none;">
+                <h2>Episode 18</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/9047?download_token=1a9405a4960789835168d2d3bc02c4c759b3475010b0081ecab32c3508a332b5" type="video/mp4" size="480">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div id="episode19" class="video-container" style="display: none;">
+                <h2>Episode 19</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/9049?download_token=46dfa7690065478f4f0fb95b9212434faf79e21b59977c5268bf76861267978b" type="video/mp4" size="480">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div id="episode20" class="video-container" style="display: none;">
+                <h2>Episode 20</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/904d?download_token=dc44da2d484ca28e438d52bf4dec7792b158e3fe9d1e7c252ea195b587c7ae91" type="video/mp4" size="480">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div id="episode21" class="video-container" style="display: none;">
+                <h2>Episode 21</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/903e?download_token=56f2c906423bdfc2980048484640007284cdf8d38b436aa6d10e1ef3bfb02399" type="video/mp4" size="480">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div id="episode22" class="video-container" style="display: none;">
+                <h2>Episode 22</h2>
+                <video controls>
+                    <source src="https://files012.tusdrive.com/903f?download_token=9126ea9f0f867d2e259e2c06ea80ca7f8afbf2e9d09a26311353812feb5fe01c" type="video/mp4" size="480">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <h2>Social media</h2>
+            <p><strong>Instagram</strong> movieclicktr </p>
+            <p><strong>TikTok</strong> Movieclicktro </p>
+            <p><strong>Discord</strong> </p>
+        </div>
+    </section>
+</body>
+</html>
