@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieClick</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/3afdf3da9ccd5f6f875dd1da03760d4a~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=28864&refresh_token=0b7f7d0c0bcf4727bf33890183f22df0&x-expires=1736308800&x-signature=PeX6QVsZMprLJFIssnOKR2F0P0E%3D&shp=a5d48078&shcp=81f88b70" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css">
+</head>
+<body class="bg-gray-100 font-roboto relative">
+    <img src="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2024/12/ROO_S7_KA_1080x1350_v1-1_PRE.jpg" alt="Background image of a movie poster with dramatic lighting and characters" class="background-image">
+    <div class="background-gradient"></div>
+    <div class="container mx-auto p-4 relative z-10">
+        <div class="text-center mb-6">
+            <img src="https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/3afdf3da9ccd5f6f875dd1da03760d4a~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=28864&refresh_token=0b7f7d0c0bcf4727bf33890183f22df0&x-expires=1736308800&x-signature=PeX6QVsZMprLJFIssnOKR2F0P0E%3D&shp=a5d48078&shcp=81f88b70" alt="MC" class="mx-auto w-24 h-24 rounded-full">
+            <h1 class="text-4xl font-bold mt-4 text-white text-stroke">MovieClick</h1>
+        </div>
+        <div class="flex justify-center mb-6">
+            <button id="videoQualityBtn" class="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition duration-300">Is the video quality poor?</button>
+        </div>
+        <div id="videoQualityInstructions" class="hidden mt-2 p-4 bg-gray-100 rounded shadow">
+            <p>Click on the video.</p>
+            <p>Look for the settings button. It's usually located in the bottom right corner.</p>
+            <p>Click on the settings button.</p>
+            <p>Select the highest quality option. This is often labeled as "720p" or "1080p HD."</p>
+        </div>
+        <div class="flex justify-center mb-6">
+            <div class="video-container">
+                <video id="videoPlayer" class="plyr__video-embed" controls>
+                    <source src="TRS7E1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="flex justify-center space-x-4">
+            <button id="season6Btn" class="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 rounded-full hover:from-blue-700 hover:to-blue-900 transition duration-300">Season 6</button>
+            <button id="season7Btn" class="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 rounded-full hover:from-blue-700 hover:to-blue-900 transition duration-300">Season 7</button>
+        </div>
+        <div id="episodeList" class="mt-6 space-y-2">
+            <!-- Episodes will be dynamically inserted here -->
+        </div>
+    </div>
+    <a href="https://www.tiktok.com/@movieclickreal" target="_blank" class="absolute top-4 right-4">
+        <img src="https://static.vecteezy.com/system/resources/previews/023/986/939/non_2x/tiktok-logo-tiktok-logo-transparent-tiktok-icon-transparent-free-free-png.png" alt="TikTok Logo" width="30" height="30">
+    </a>
+    <script src="https://cdn.plyr.io/3.6.12/plyr.polyfilled.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+/* Global Styles */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #333;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Fade-In Animation */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Iframe */
+.custom-iframe {
+  border: 2px solid #000000;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  background-color: #fff;
+}
+
+.custom-iframe:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+/* Video Container and Controls */
+.video-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.control-button {
+  background: #ff7e5f;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.control-button:hover {
+  background: #feb47b;
+}
+
+.control-slider {
+  margin-left: 10px;
+}
+
+/* Background Image */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  object-fit: cover;
+  opacity: 0.6;
+  mix-blend-mode: multiply;
+}
+
+/* Background Gradient */
+.background-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+  z-index: -1;
+}
+
+/* Text Stroke */
+.text-stroke {
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Styles */
+.bg-gradient-to-r {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  background-size: 200% auto;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background-position 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.bg-gradient-to-r:hover {
+  background-position: 100% 0;
+  transform: translateY(-3px);
+}
+
+/* Episode List Styles */
+#episodeList .bg-white {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+}
+
+#episodeList .bg-white:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Gray Background */
+.bg-gray-800 {
+  background-color: #333;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.bg-gray-800:hover {
+  background-color: #555;
+  transform: translateY(-3px);
+}
